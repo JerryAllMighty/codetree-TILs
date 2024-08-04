@@ -6,4 +6,6 @@ elif len(s[0]) < len(s[1]):
     ss = s[1]
 else:
     ss = 'same'
+    print(ss)
+    exit(0)
 print(ss, max(len(s[0]), len(s[1])))
