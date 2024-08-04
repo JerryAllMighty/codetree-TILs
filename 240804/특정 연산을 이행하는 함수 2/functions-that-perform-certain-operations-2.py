@@ -3,13 +3,6 @@ import math
 lst = list(map(float, input().split(' ')))
 small = min(lst)
 big = max(lst)
-answers = []
-for i in lst:
-    if i == small:
-        answers.append(math.floor(i))
-    elif i == big:
-        answers.append(math.ceil(i))
-    else:
-        answers.append(round(i))
+mid = [i for i in lst if i is not small and i is not big]
 
-print(*answers)
+print(math.ceil(big), math.floor(small), round(mid[0]), sep=' ')
