@@ -1,13 +1,13 @@
-n, m = map(int, input().split(' '))
+n, m = map(int, input().strip().split(' '))
 
 lst1 = [
-    list(map(int,input().split(' ')))
+    list(map(int,input().strip().split(' ')))
     for _ in range(n)
 
 ]
 
 lst2 = [
-    list(map(int,input().split(' ')))
+    list(map(int,input().strip().split(' ')))
     for _ in range(n)
 
 ]
