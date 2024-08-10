@@ -1,7 +1,7 @@
 n = int(input())
 
-lst = list(map(int, input().split(' ')))
-lst2 = list(map(int, input().split(' ')))
+lst = list(map(int, input().strip().split(' ')))
+lst2 = list(map(int, input().strip().split(' ')))
 
 lst.sort()
 lst2.sort()
