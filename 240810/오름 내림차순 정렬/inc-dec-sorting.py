@@ -1,6 +1,6 @@
 n = int(input())
 
-lst = list(map(int, input().split(' ')))
+lst = list(map(int, input().strip().split(' ')))
 
 lst.sort()
 print(*lst)
