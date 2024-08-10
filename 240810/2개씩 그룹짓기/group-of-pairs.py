@@ -2,7 +2,10 @@ n = int(input())
 
 lst = list(map(int, input().strip().split(' ')))
 
-cmp1 = lst[0] + lst[1]
+if n == 1:
+    cmp1 = lst[0] + lst[1]
+else:
+    cmp1 = 10 ** 9
 # 2개씩 그룹을 짝짓는다
 for i in range((2*n)-2):
     for j in range(i+1, (2 * n)):
