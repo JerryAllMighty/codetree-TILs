@@ -1,9 +1,6 @@
 n = int(input())
 
-lst2 = input().split(' ')
-lst = []
-for i in lst2:
-    lst.append(int(i))
+lst = list(map(int, input().split(' ')))
 
 lst.sort()
 print(*lst)
