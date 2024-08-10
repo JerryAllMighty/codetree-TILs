@@ -1,29 +1,28 @@
 n = int(input())
-
 lst = list(map(int, input().strip().split(' ')))
 
-if n == 1:
-    cmp1 = lst[0] + lst[1]
-else:
-    cmp1 = 10 ** 9
-# 2개씩 그룹을 짝짓는다
-for i in range((2*n)-2):
-    for j in range(i+1, (2 * n)):
-        # 짝지은 그룹들의 합은 보관하는 리스트
+answer = 10 ** 9
+for i in range((2 * n)):
+    for j in range(i + 1, (2 * n)):
+        # 2개씩 그룹짓고 리스트에 넣어준다
         temp = []
-        temp.append(lst[i]+lst[j])
-        num = 0
-        for k in range(0, (2 * n)):
-            if k != i and k != j:
-                if num == 0:
-                    num += lst[k]
-                else:
-                    num += lst[k]
-                    temp.append(num)
-                    num = 0
+        num1 = lst[i] + lst[j]
+        temp.append(num1)
+        num2 = 0
+        for k in range((2 * n)):
 
-        # 짝지은 그룹 중 최댓값을 찾는다
-        if max(temp) < cmp1:
-            # 그중 최솟값을 삽입
-            cmp1 = max(temp)
-print(cmp1)
+            if k != i and k != j:
+                if num2 == 0:
+                    num2 += lst[k]
+                else:
+                    num2 += lst[k]
+                    temp.append(num2)
+                    num2 = 0
+
+        # 그룹지은 것들 중 최댓값을 찾는다.
+        choidae = max(temp)
+        # 더 작은 최댓값을 삽입
+        if choidae < answer:
+            answer = choidae
+
+print(answer)
