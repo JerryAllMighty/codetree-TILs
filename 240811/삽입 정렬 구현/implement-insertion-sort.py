@@ -4,7 +4,7 @@ answers = [lst[0]]
 for i in range(1,n):
     key = lst[i]
     for j in range(len(answers)-1, -1, -1):
-        if answers[j] < key:
+        if answers[j] <= key:
             answers.insert(j+1,key)
             break
     if answers[0] > key:
