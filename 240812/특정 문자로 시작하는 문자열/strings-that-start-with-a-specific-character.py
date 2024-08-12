@@ -9,5 +9,5 @@ for s in lst:
     if s[0:1] == k:
         cnt += 1
         length += len(s)
-length = "{:.2f}".format(length//cnt)
+length = "{:.2f}".format(round(length//cnt,2))
 print(cnt, length, sep=' ')
