@@ -10,4 +10,4 @@ for s in lst:
         cnt += 1
         length += len(s)
 length = "{:.2f}".format(length//cnt)
-print(cnt, length)
+print(cnt, length, sep=' ')
