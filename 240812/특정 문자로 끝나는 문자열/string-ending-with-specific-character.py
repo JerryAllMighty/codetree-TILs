@@ -7,3 +7,5 @@ k = input()
 for s in lst:
     if s[-1] == k:
         print(s)
+        exit(0)
+print('None')
