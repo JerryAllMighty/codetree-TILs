@@ -26,4 +26,6 @@ for i in s:
     elif i == ')':
         if len(lst) > 0:
             lst.pop()
+        else:
+            lst.append(i)
 print('Yes' if len(lst) == 0 else 'No')
