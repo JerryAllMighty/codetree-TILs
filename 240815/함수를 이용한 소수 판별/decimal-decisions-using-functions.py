@@ -6,8 +6,8 @@ answer = 0
 
 def isPrimeNum(num):
     isPrime = True
-    if num < 3:
-        return True
+    if num < 1:
+        return False
     else:
         for j in range(2, num):
             if num % j == 0:
