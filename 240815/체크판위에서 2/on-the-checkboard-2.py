@@ -5,8 +5,8 @@ lst = [
     for _ in range(n)
 ]
 answer = 0
-for i in range(n):
-    for j in range(n):
+for i in range(n-1):
+    for j in range(n-1):
         for k in range(i+1, n):
             for l in range(j + 1, n):
                 if lst[i][j] != lst[k][l]:
