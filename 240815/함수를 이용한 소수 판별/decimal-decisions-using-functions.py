@@ -6,7 +6,7 @@ answer = 0
 
 def isPrimeNum(num):
     isPrime = True
-    if num < 1:
+    if num < 2:
         return False
     else:
         for j in range(2, num):
