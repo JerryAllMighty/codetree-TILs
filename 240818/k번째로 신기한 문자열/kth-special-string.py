@@ -6,9 +6,11 @@ lst = [
     input()
     for _ in range(n)
 ]
+
 wordLst = []
 for s in lst:
-    if s[:2] == word:
+    if s[:len(word)] == word:
         wordLst.append(s)
 wordLst.sort()
+
 print(wordLst[k-1])
