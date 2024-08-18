@@ -35,6 +35,8 @@ def recursive2(num, idx):
         answer = minBaesu
     return
 
-
-recursive2(given[0], 1)
-print(answer)
+if n == 1:
+    print(*given)
+else:
+    recursive2(given[0], 1)
+    print(answer)
