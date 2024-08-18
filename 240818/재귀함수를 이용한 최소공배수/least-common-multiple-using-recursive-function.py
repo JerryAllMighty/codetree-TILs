@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(10000)
+
 n = int(input())
 given = list(map(int, input().split()))
 lst = []
@@ -26,8 +29,12 @@ def recursive2(num, idx):
         if lst.count(i) > 1 and i > maxYaksu:
             maxYaksu = i
     minBaesu = maxYaksu * (num // maxYaksu) * (given[idx] // maxYaksu)
-    return max(recursive2(minBaesu, idx + 1),minBaesu)
+    recursive2(minBaesu, idx + 1)
+    if idx == n - 1:
+        global answer
+        answer = minBaesu
+    return
 
 
-
-print(recursive2(given[0], 1))
+recursive2(given[0], 1)
+print(answer)
