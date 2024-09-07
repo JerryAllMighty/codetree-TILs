@@ -1,5 +1,6 @@
 day, hour, minute = map(int, input().split())
-if day < 11 and hour < 11 and minute < 11:
+
+if (((day) * 24 * 60) + ((hour) * 60) + (minute )) < ((11 * 24 * 60) + (11 * 60) + 11):
     print(-1)
     exit(1)
 else:
