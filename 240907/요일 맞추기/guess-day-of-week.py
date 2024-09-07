@@ -13,10 +13,17 @@ def countDays(month):
         result += 30
     return result
 
+if m1 <= m2:
+    for i in range(m1, m2):
+        days += countDays(i)
 
-for i in range(m1, m2):
-    days += countDays(i)
+    days = days - d1 + d2
+    lst = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    print(lst[(days % 7)])
+else:
+    for i in range(m2, m1):
+        days += countDays(i)
 
-days = days - d1 + d2
-lst = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
-print(lst[(days % 7)])
+    days = days - d2 + d1
+    lst = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    print(lst[(-days % 7)])
