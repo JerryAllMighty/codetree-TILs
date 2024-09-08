@@ -3,6 +3,7 @@ weekDay = input()
 lst = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 days = 0
 
+
 def countDays(month):
     result = 0
     if month in [1, 3, 5, 7, 8, 10, 12]:
@@ -17,6 +18,6 @@ def countDays(month):
 for i in range(m1, m2):
     days += countDays(i)
 
-days = days - (d1+lst.index(weekDay)-1) + d2
+days = days - (d1 + lst.index(weekDay)) + d2
 
-print((days//7)+1)
+print((days // 7)+1)
