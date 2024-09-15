@@ -67,11 +67,11 @@ w = 0
 b = 0
 g = 0
 for key, val in collections.Counter(lst).items():
-    if key[4] == 'W':
+    if key[-1] == 'W':
         w += val
-    elif key[4] == 'B':
+    elif key[-1] == 'B':
         b += val
-    if key[4] == 'G':
+    if key[-1] == 'G':
         g += val
 
 print(w, b, g)
