@@ -2,8 +2,8 @@ import collections
 
 n = int(input())
 lst = [
-    [0 for i in range(n * 100)]
-    for _ in range(n * 100)
+    [0 for i in range(n * 8)]
+    for _ in range(n * 8)
 ]
 cnt = n
 while (cnt > 0):
