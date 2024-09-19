@@ -19,5 +19,6 @@ for i in range(x3, x2):
 answer = 0
 for i in lst:
     answer += collections.Counter(i).get(2) if collections.Counter(i).get(2) is not None else 0
+    answer += collections.Counter(i).get(1) if collections.Counter(i).get(1) is not None else 0
 
-print(answer + ((x2-x3) * (y4-y1)))
+print(answer)
