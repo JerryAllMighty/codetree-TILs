@@ -8,13 +8,13 @@ offset = 1000
 x1, y1, x2, y2 = map(int, input().split())
 for i in range(x1, x2+1):
     for j in range(y1, y2+1):
-        lst[i][j] = 2
+        lst[i+offset][j+offset] = 2
 
 x3, y3, x4, y4 = map(int, input().split())
 
 for i in range(x3, x4+1):
     for j in range(y3, y4+1):
-        lst[i][j] -= 1
+        lst[i+offset][j+offset] -= 1
 
 rows = []
 cols = []
