@@ -22,7 +22,7 @@ for i in lst:
         isLeft += collections.Counter(i).get(2)
 if isLeft == 0:
     print(0)
-    exit(1)
+    exit(0)
 
 a = 0
 b = x2 + offset
