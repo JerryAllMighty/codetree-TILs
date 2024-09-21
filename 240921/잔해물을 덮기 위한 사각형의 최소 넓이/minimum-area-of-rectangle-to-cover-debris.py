@@ -1,3 +1,5 @@
+import collections
+
 x1, y1, x2, y2 = map(int, input().split())
 x3, y3, x4, y4 = map(int, input().split())
 
@@ -14,6 +16,14 @@ for i in range(x3, x4):
     for j in range(y3, y4):
         if lst[i + offset][j + offset] == 2:
             lst[i + offset][j + offset] -= 1
+isLeft = 0
+for i in lst:
+    if collections.Counter(i).get(2) is not None:
+        isLeft += collections.Counter(i).get(2)
+if isLeft == 0:
+    print(0)
+    exit(1)
+
 a = 0
 b = x2 + offset
 c = 0
