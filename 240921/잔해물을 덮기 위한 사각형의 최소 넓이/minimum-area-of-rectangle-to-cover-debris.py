@@ -6,26 +6,28 @@ lst = [
     for _ in range(4000)
 ]
 offset = 1000
-rows = []
-cols = []
-
-for i in range(x1, x2 + 1):
-    for j in range(y1, y2 + 1):
-        rows.append(i)
-        cols.append(j)
+for i in range(x1, x2):
+    for j in range(y1, y2):
         lst[i + offset][j + offset] = 2
 
-for i in range(x3, x4 + 1):
-    for j in range(y3, y4 + 1):
+for i in range(x3, x4):
+    for j in range(y3, y4):
         if lst[i + offset][j + offset] == 2:
-            if i in rows:
-                rows.remove(i)
-            if j in cols:
-                cols.remove(j)
-        lst[i + offset][j + offset] -= 1
-maxRow = max(rows) if rows else 0
-minRow = min(rows) if rows else 0
-maxCol = max(cols) if cols else 0
-minCol = min(cols) if cols else 0
+            lst[i + offset][j + offset] -= 1
+a = 0
+b = x2 + offset
+c = 0
+d = y2 + offset
+for i in range(len(lst)):
+    for j in range(len(lst[i])):
+        if lst[i][j] == 2:
+            if i > a:
+                a = i
+            if i < b:
+                b = i
+            if j > c:
+                c = j
+            if j < d:
+                d = j
 
-print((maxRow - minRow) * (maxCol - minCol))
+print((a - b + 1) * (c - d + 1))
