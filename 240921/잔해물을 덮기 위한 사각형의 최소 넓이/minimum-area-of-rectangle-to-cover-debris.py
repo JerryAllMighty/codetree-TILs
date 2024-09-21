@@ -23,9 +23,9 @@ for i in range(x3, x4 + 1):
             if j in cols:
                 cols.remove(j)
         lst[i + offset][j + offset] -= 1
-maxRow = max(rows) if max(rows) is not None else 0
-minRow = min(rows) if min(rows) is not None else 0
-maxCol = max(cols) if max(cols) is not None else 0
-minCol = min(cols) if min(cols) is not None else 0
+maxRow = max(rows) if rows else 0
+minRow = min(rows) if rows else 0
+maxCol = max(cols) if cols else 0
+minCol = min(cols) if cols else 0
 
 print((maxRow - minRow) * (maxCol - minCol))
