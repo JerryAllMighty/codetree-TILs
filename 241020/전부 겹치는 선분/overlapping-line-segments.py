@@ -5,7 +5,7 @@ temp = [i for i in range(a, b + 1)]
 cnt = 1
 for _ in range(n-1):
     a, b = map(int, input().split())
-    for i in range(a, b + 1):
+    for i in range(a, b):
         if i in temp:
             cnt += 1
             break
