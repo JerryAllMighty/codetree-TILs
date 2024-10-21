@@ -9,8 +9,9 @@ for _ in range(n):
         visited.append(pigeon)
         lst.append([pigeon, direction])
     else:
-        for i in lst:
-            if i[0] == pigeon and i[1] != direction:
+        for i in range(len(lst)):
+            if lst[i][0] == pigeon and lst[i][1] != direction:
+                lst[i][1] = direction
                 answer += 1
 
 
