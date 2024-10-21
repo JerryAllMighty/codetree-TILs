@@ -6,7 +6,7 @@ lst2 = list(map(int, input().split()))
 
 def findSmall(num):
     for i in range(n):
-        if lst[i] + num < lst2[i]:
+        if lst[i] + num <= lst2[i]:
             return i
     return -1
 
