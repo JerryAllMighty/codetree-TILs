@@ -8,7 +8,7 @@ def isContinuous(targetList):
 
 
 def isAlmostContinuous(targetList):
-    if targetList[0] + 2 == targetList[1] or targetList[0] == targetList[1] + 2:
+    if ((targetList[0] + 2) == targetList[1]) or ((targetList[1]+2) == targetList[2]):
         return True
     return False
 
