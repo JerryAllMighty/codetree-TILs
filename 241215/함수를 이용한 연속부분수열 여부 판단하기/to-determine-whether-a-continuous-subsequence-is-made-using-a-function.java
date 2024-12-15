@@ -22,7 +22,7 @@ public class Main {
                 answer = "No";
             }
         }
-        if (idxList.isEmpty()) {
+        if (idxList.isEmpty() || n1 < n2) {
             answer = "No";
         }
         System.out.println(answer);
