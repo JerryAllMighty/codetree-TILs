@@ -22,6 +22,9 @@ public class Main {
                 answer = "No";
             }
         }
+        if (idxList.isEmpty()) {
+            answer = "No";
+        }
         System.out.println(answer);
 
         sc.close();
