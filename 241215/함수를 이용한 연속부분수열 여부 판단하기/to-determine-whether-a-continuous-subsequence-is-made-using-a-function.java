@@ -1,6 +1,25 @@
 import java.util.*;
 
 public class Main {
+    static boolean isSameArray(List<String> n1, String[] n2) {
+        boolean result = true;
+        for (int i = 0; i < n1.size(); i++) {
+            if (!n1.get(i).equals(n2[i])) {
+                return false;
+            }
+        }
+        return result;
+    }
+
+    static List<String> makePartArray(String[] n1, int n, int m) {
+        List<String> result = new ArrayList<>();
+        for (int i = n; i < m; i++) {
+            result.add(n1[i]);
+        }
+        return result;
+
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String[] input = sc.nextLine().split(" ");
@@ -8,25 +27,16 @@ public class Main {
         int n2 = Integer.parseInt(input[1]);
         String[] n1List = sc.nextLine().split(" ");
         String[] n2List = sc.nextLine().split(" ");
-        List<Integer> idxList = new ArrayList<>();
-        for (int i = 0; i < n2; i++) {
-            for (int j = 0; j < n1; j++) {
-                if (Objects.equals(n1List[j], n2List[i])) {
-                    idxList.add(j);
-                }
+        String answer = "No";
+        for (int i = 0; i <= n1 - n2; i++) {
+            if (isSameArray(makePartArray(n1List, i, i + n2), n2List)) {
+                answer = "Yes";
+                System.out.println(answer);
+                sc.close();
+                System.exit(0);
             }
-        }
-        String answer = "Yes";
-        for (int i = 0; i < idxList.size() - 1; i++) {
-            if (idxList.get(i) + 1 != idxList.get(i + 1)) {
-                answer = "No";
-            }
-        }
-        if (idxList.isEmpty() || n1 < n2) {
-            answer = "No";
         }
         System.out.println(answer);
-
         sc.close();
     }
 }
