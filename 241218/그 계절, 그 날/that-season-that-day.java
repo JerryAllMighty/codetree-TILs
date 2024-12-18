@@ -50,15 +50,15 @@ public class Main {
     static boolean isYoon(int year) {
         boolean isYoon = false;
         if (year % 4 == 0) {
-            isYoon = true;
-        } else if ((year % 4 == 0 && year % 100 == 0)) {
-            if (year % 400 == 0) {
+            if(year % 100 == 0){
+                if(year % 400 == 0){
+                    isYoon = true;
+                }else{
+                    isYoon = false;
+                }
+            }else{
                 isYoon = true;
-            } else {
-                isYoon = false;
             }
-        } else {
-            isYoon = false;
         }
         return isYoon;
     }
