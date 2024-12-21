@@ -11,6 +11,7 @@ public class Main {
             String eachWord = input.substring(i, i + word.length());
             if (word.equals(eachWord)) {
                 answer = i;
+                break;
             }
         }
         System.out.println(answer);
