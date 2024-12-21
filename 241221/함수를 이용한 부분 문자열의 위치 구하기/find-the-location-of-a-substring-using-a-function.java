@@ -6,7 +6,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         String word = sc.nextLine();
-        int answer = 0;
+        int answer = -1;
         for (int i = 0; i <= input.length()-word.length(); i++) {
             String eachWord = input.substring(i, i + word.length());
             if (word.equals(eachWord)) {
